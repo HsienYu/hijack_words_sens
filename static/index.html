@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hijacker_Sens</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var s;
+        var fetch = function () {
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:3000/query",
+                dataType: 'JSON',
+                success: function (response) {
+                    console.log(response);
+                    s = response;
+                    $("#sens").html(s);
+                },
+            });
+        };
+
+        setInterval(fetch, 15000);
+    </script>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        #sens {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            position: fixed;
+            top: 50%;
+            font-size: 60px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+    <div id="sens">
+
+    </div>
+    </p>
+</body>
+
+</html>

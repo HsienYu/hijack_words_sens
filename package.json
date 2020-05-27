@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/HsienYu/hijack_words_sens#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "nonsensical": "^0.5.0",
+    "select-random-file": "^1.1.0",
     "wordnetjs": "github:wassname/wordnet.js#abcc71a860778724c2ebc9f97eecf4e6a07ca178"
   }
 }
